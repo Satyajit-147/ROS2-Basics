@@ -21,11 +21,11 @@ In this task, I created two nodes:
 
 ### Topics
 
-Topics are the communication channels in ROS 2. A node can either publish data to a topic or subscribe to a topic to receive data. Topics are strongly typed, meaning the data format being sent must be agreed upon by both the publisher and subscriber.
+Topics are the communication channels in ROS 2. It's a named location that allows the publisher nodes to publish the message and the subscriber noded (subscribed to the location) to access the message and process it further.
 
 In my example:
 
-    The publisher node publishes messages to a topic (e.g., /number_square).
+    The publisher node publishes messages to a topic (e.g: /number_square).
 
     The subscriber node listens to this topic and processes the incoming messages.
 
