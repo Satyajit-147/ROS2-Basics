@@ -67,5 +67,54 @@ dev_ws/
             ├── number_publisher.py
             └── square_subscriber.py
 ```
+## Task Overview
+
+The goal of this task was to build a simple ROS2 system that demonstrates communication between the publisher node and the subscirber node. In my approach, I used a 1 second time delay between each message (number) and the sqaure of that number will be printed in a new terminal dedicated for the subscriber node. I've listed the steps that I followed to successfully complete the project below:
+
+1. Created a new ROS 2 workspace called dev_ws, which follows the standard structure (src/, build/, install/, etc.).
+
+2. Initialized a new ROS 2 package named number_square_package inside the src/ folder using Python as the build type.
+
+3. Developed a publisher node (number_publisher.py) that continuously publishes a stream of integers on a custom topic.
+
+4. Created a subscriber node (square_subscriber.py) that subscribes to the same topic and calculates the square of each received number.
+
+5. Updated the package.xml and setup.py files to include metadata and dependencies required to build and run the nodes.
+
+6. Added an __init__.py file to treat the node scripts as a Python module.
+
+7. Tested the nodes by building the workspace, sourcing the setup script, and running the nodes in separate terminals to verify correct publishing and subscribing behavior.
+
+##Commands
+
+    mkdir -p dev_ws/src
+Creates a new ROS 2 workspace directory with a src subdirectory.
+
+    cd dev_ws/src
+Navigates into the src folder to create or add packages.
+
+    ros2 pkg create --build-type ament_python number_square_package
+Initializes a new Python-based ROS 2 package.
+
+    cd .. && colcon build
+Builds the entire workspace using colcon.
+
+    source install/setup.bash
+Sources the environment so that ROS 2 recognizes your package and nodes.
+
+    ros2 run number_square_package number_publisher
+Runs the publisher node from your custom package.
+
+    ros2 run number_square_package square_subscriber
+Runs the subscriber node that calculates squares of received numbers.
+
+    ros2 topic echo /topic_name
+Displays the messages being published on a given topic (used for debugging).
+
+    ros2 topic list
+Lists all active topics, helping you verify if your publisher is working.
+
+    ros2 pkg list
+Lists all packages that are discoverable in the current ROS 2 environment.
 
 
