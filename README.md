@@ -5,9 +5,10 @@ This README documents my initial learning journey with ROS 2 — covering key co
 ## Learnings
 
 This was my first hands-on experience with ROS 2 (Robot Operating System 2), and it gave me a strong foundational understanding of how ROS-based systems are structured and how different components interact. Here's a breakdown of the key concepts I learned and understood during the task:
+
 ### ROS 2
 
-ROS 2 is a flexible and modular framework used to build robot applications. It's built around the idea of dividing a system into independent nodes that can communicate with each other using topics and messages. This modularity allows for scalable and distributed robotic software.
+ROS 2 consists of set of libraries required to build a fully-functioning robot in an isolated environment
 
 ### Nodes
 
