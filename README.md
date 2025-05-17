@@ -86,7 +86,7 @@ The goal of this task was to build a simple ROS2 system that demonstrates commun
 7. Tested the nodes by building the workspace, sourcing the setup script, and running the nodes in separate terminals to verify correct publishing and subscribing behavior.
 
 ##Commands
-1.
+
     mkdir -p dev_ws/src
 Creates a new ROS 2 workspace directory with a src subdirectory.
 
@@ -96,8 +96,8 @@ Navigates into the src folder to create or add packages.
     ros2 pkg create --build-type ament_python number_square_package
 Initializes a new Python-based ROS 2 package.
 
-    cd .. && colcon build
-Builds the entire workspace using colcon.
+    colcon build
+Used to build all the packages in your ROS 2 workspace. It handles package dependencies, builds order, and integrates with CMake or Python build systems.
 
     source install/setup.bash
 Sources the environment so that ROS 2 recognizes your package and nodes.
@@ -107,9 +107,6 @@ Runs the publisher node from your custom package.
 
     ros2 run number_square_package square_subscriber
 Runs the subscriber node that calculates squares of received numbers.
-
-    ros2 topic echo /topic_name
-Displays the messages being published on a given topic (used for debugging).
 
     ros2 topic list
 Lists all active topics, helping you verify if your publisher is working.
