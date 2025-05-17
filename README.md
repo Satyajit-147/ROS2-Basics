@@ -86,7 +86,7 @@ The goal of this task was to build a simple ROS2 system that demonstrates commun
 7. Tested the nodes by building the workspace, sourcing the setup script, and running the nodes in separate terminals to verify correct publishing and subscribing behavior.
 
 ##Commands
-
+1.
     mkdir -p dev_ws/src
 Creates a new ROS 2 workspace directory with a src subdirectory.
 
