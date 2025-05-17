@@ -50,6 +50,7 @@ I created a workspace called dev_ws, which follows the standard ROS 2 structure 
 
 ## Structure of my Workspace (dev_ws):
 
+```
 dev_ws/
 ├── build/
 ├── install/
@@ -65,5 +66,6 @@ dev_ws/
             ├── __init__.py
             ├── number_publisher.py
             └── square_subscriber.py
+```
 
 
