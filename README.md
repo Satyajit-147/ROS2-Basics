@@ -12,7 +12,7 @@ ROS 2 consists of set of libraries required to build a fully-functioning robot i
 
 ### Nodes
 
-A node is a single process that performs computation. Each node in a ROS 2 system is designed to do a specific task — for example, reading sensor data, controlling motors, or performing some logic. Nodes run independently but can communicate with one another, making systems loosely coupled and easier to manage and debug.
+ROS is made out of a bunch of smaller programs that all work together to build the final robot. Each of these smaller programs is termed as a node. NOde is designed to carry out operations such as reading sensor data, sending signals to motor and etc.
 
 In this task, I created two nodes:
 
@@ -22,7 +22,7 @@ In this task, I created two nodes:
 
 ### Topics
 
-Topics are the communication channels in ROS 2. It's a named location that allows the publisher nodes to publish the message and the subscriber noded (subscribed to the location) to access the message and process it further.
+Topics are the communication channels in ROS 2. It's a named location that allows the publisher nodes to publish the message and the subscriber noded (a node with subscription to the location) to access the message and process it further.
 
 In my example:
 
@@ -46,4 +46,24 @@ In this task, I created a Python-based package named number_square_package. This
 
 A ROS 2 workspace is a directory where one or more packages can be developed and built. It provides an isolated environment where custom packages can be created, tested, and compiled using build tools like colcon.
 
-I created a workspace called dev_ws, which follows the standard ROS 2 structure with a src directory inside it to store all the packages.
+I created a workspace called dev_ws, which follows the standard ROS 2 structure with a src directory inside it to store all the packages inside it.
+
+## Structure of my Workspace (dev_ws):
+
+dev_ws/
+├── build/
+├── install/
+├── log/
+└── src/
+    └── number_square_package/
+        ├── package.xml
+        ├── setup.py
+        ├── setup.cfg
+        ├── resource/
+        ├── test/
+        └── number_square_package/
+            ├── __init__.py
+            ├── number_publisher.py
+            └── square_subscriber.py
+
+
