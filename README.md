@@ -1,4 +1,4 @@
-# ROS2-Basics
+# ROS2-Basics - Week 1
 
 This README documents my initial learning journey with ROS 2 — covering key concepts, essential commands, workspace structure, challenges encountered, and the implementation of basic publisher and subscriber nodes.
 
