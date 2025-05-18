@@ -126,4 +126,4 @@ Lists all packages that are discoverable in the current ROS 2 environment.
 
  Challenge: The build command failed multiple times due to missing dependencies or syntax errors in package.xml or setup.py.
 
- Fix: I carefully reviewed both configuration files, added required dependencies like rclpy, and fixed YAML/XML formatting issues. After each fix, I rebuilt the workspace using colcon build and sourced the environment properly.
+ Fix: I carefully reviewed both configuration files, added required dependencies like rclpy, and fixed XML formatting issues. After each fix, I rebuilt the workspace using colcon build and sourced the environment properly.
