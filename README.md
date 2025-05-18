@@ -116,14 +116,14 @@ Lists all packages that are discoverable in the current ROS 2 environment.
 
 ## Challenges
 
-1. Managing Python Imports Across Packages
+### 1. Managing Python Imports Across Packages
 
-Challenge: I faced import errors when trying to access my Python scripts, especially between number_publisher.py and square_subscriber.py.
+ Challenge: I faced import errors when trying to access my Python scripts, especially between number_publisher.py and square_subscriber.py.
 
-Fix: I ensured each Python package included an __init__.py file, followed ROS 2 Python module structure, and adjusted the file paths accordingly.
+ Fix: I ensured each Python package included an __init__.py file, followed ROS 2 Python module structure, and adjusted the file paths accordingly.
 
-3. Colcon Build Issues
+### 3. Colcon Build Issues
 
-Challenge: The build command failed multiple times due to missing dependencies or syntax errors in package.xml or setup.py.
+ Challenge: The build command failed multiple times due to missing dependencies or syntax errors in package.xml or setup.py.
 
-Fix: I carefully reviewed both configuration files, added required dependencies like rclpy, and fixed YAML/XML formatting issues. After each fix, I rebuilt the workspace using colcon build and sourced the environment properly.
+ Fix: I carefully reviewed both configuration files, added required dependencies like rclpy, and fixed YAML/XML formatting issues. After each fix, I rebuilt the workspace using colcon build and sourced the environment properly.
