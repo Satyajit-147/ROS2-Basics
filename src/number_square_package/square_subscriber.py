@@ -1,15 +1,22 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int32
+from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy
+
 
 class SquareSubscriber(Node):
     def __init__(self):
         super().__init__('square_subscriber')
+        qos_profile = QoSProfile(
+            depth=10,
+            reliability=ReliabilityPolicy.RELIABLE,
+            durability=DurabilityPolicy.VOLATILE
+        )
         self.subscription = self.create_subscription(
             Int32,
             'number',
             self.callback,
-            10
+            qos_profile
         )
 
     def callback(self, msg):
@@ -25,4 +32,3 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-
